@@ -1,0 +1,44 @@
+:root{
+      --background-Pkey: rgb(230, 128, 179);
+      --background-Fkey: rgb(83, 226, 83);
+      --even-child: rgb(220, 218, 218);
+      --odd-child: white;
+      --font-color: rgb(57, 54, 54);
+}
+
+body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      font-size: 1.45rem;
+      color:var(--font-color) ;
+}
+
+.tableStyle{
+      border-collapse: collapse;
+      width: 85%;
+      margin: auto;
+}
+
+th,tr{
+      padding: 0.75rem;
+      border: 1px solid gray;
+      text-align: left;
+}
+
+tr:nth-child(even){
+      background-color: var(--even-child);
+}
+tr:nth-child(odd){
+      background-color: var(--odd-child);
+}
+
+.Fkey{
+      background: var(--background-Fkey);
+}
+.Pkey{
+      background-color: var(--background-Pkey);
+}
+
+h1,h2{
+      text-align: center;
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="style.css">      
+      <title>library database</title>
+</head>
+      <link rel="stylesheet" href="style.css">
+      <body>
+            <h1>Library Management System</h1>
+            <!-- Library Table -->
+            <h2>Library</h2>
+            <table id="libraryTable" class="tableStyle">
+                  <tr>
+                        <th class="Pkey"><p class="tableElement">lib_ID</p></th>
+                        <th><p class="tableElement">lib_name</p></th>
+                  </tr>
+            </table>
+            <!-- Employees Table -->
+            <h2>Employees</h2>
+            <table id="employeeTable" class="tableStyle">
+                  <tr>
+                        <th class="Pkey"><p class="tableElement">EmpID</p></th>
+                        <th class="Fkey"><p class="tableElement">lib_ID</p></th>
+                        <th><p class="tableElement">Name</p></th>
+                        <th><p class="tableElement">salary</p></th>
+                  </tr>
+            </table>
+            <!-- Employee Contacts Table -->
+            <h2>Employee Contacts</h2>
+            <table id="employeeContactsTable" class="tableStyle">
+                  <tr>
+                        <th class="Pkey"><p class="tableElement">Emp_Con</p></th>
+                        <th class="Fkey"><p class="tableElement">EmpID</p></th>
+                        <th><p class="tableElement">email</p></th>
+                        <th><p class="tableElement">phone_number</p></th>
+                  </tr>
+            </table>
+            <!-- Orders Table -->
+            <h2>Orders</h2>
+            <table id="OrdersTable" class="tableStyle">
+                  <tr>
+                        <th class="Pkey"><p class="tableElement">OrderID</p></th>
+                        <th class="Fkey"><p class="tableElement">CusID</p></th>
+                        <th><p class="tableElement">Date</p></th>
+                  </tr>
+            </table>
+            <!-- Customers Table -->
+            <h2>Customers</h2>
+            <table id="customerTable" class="tableStyle">
+                  <tr>
+                        <th class="Pkey"><p class="tableElement">CusID</p></th>
+                        <th class="Fkey"><p class="tableElement">lib_ID</p></th>
+                        <th><p class="tableElement">Name</p></th>
+                  </tr>
+            </table>
+            <!-- Customer contacts Table -->
+            <h2>Customer contacts</h2>
+            <table id="CustomerContactsTable" class="tableStyle">
+                  <tr>
+                        <th class="Pkey"><p class="tableElement">Cus_con</p></th>
+                        <th class="Fkey"><p class="tableElement">CusID</p></th>
+                        <th><p class="tableElement">email</p></th>
+                        <th><p class="tableElement">phone_number</p></th>
+                  </tr>
+            </table>
+            <!-- Books Table -->
+            <h2>Books</h2>
+            <table id="BooksTable" class="tableStyle">
+                  <tr>
+                        <th class="Pkey"><p class="tableElement">BookID</p></th>
+                        <th class="Fkey"><p class="tableElement">prod_house_ID</p></th>
+                        <th><p class="tableElement">Name</p></th>
+                        <th><p class="tableElement">Quantity</p></th>
+                        <th><p class="tableElement">category</p></th>
+                        <th><p class="tableElement">price</p></th>
+                  </tr>
+            </table> 
+            <!-- production house table -->
+            <h2>Production House</h2>
+            <table id="productionHouse" class="tableStyle">
+                  <tr>
+                        <th class="Pkey"><p class="tableElement">prod_house_ID</p></th>
+                        <th><p class="tableElement">Name</p></th>
+                  </tr>
+            </table>   
+            <!-- location table -->
+            <h2>Location</h2>
+            <table id="locationTable" class="tableStyle">
+                  <tr>
+                        <th class="Pkey"><p class="tableElement">locID</p></th>
+                        <th class="Fkey"><p class="tableElement">lib_ID</p></th>
+                        <th class="Fkey"><p class="tableElement">prod_house_ID</p></th>
+                        <th><p class="tableElement">Name</p></th>
+                  </tr>
+            </table>
+            <!-- author table -->
+            <h2>Author</h2>
+            <table id="authorTable" class="tableStyle">
+                  <tr>
+                        <th class="Pkey"><p class="tableElement">authorID</p></th>
+                        <th><p class="tableElement">Name</p></th>
+                  </tr>
+            </table>
+            <!--authors books table -->
+            <h2>Author Book Table</h2>
+            <table id="authorBoksTable" class="tableStyle">
+                  <tr>
+                        <th class="Fkey"><p class="tableElement">authorID</p></th>
+                        <th class="Fkey"><p class="tableElement">BookID</p></th>
+                  </tr>
+            </table>
+            <!-- Book order table -->
+            <h2>Book order</h2>
+            <table id="bookOrders" class="tableStyle">
+                  <tr>
+                        <th class="Fkey">OrderID</th>
+                        <th class="Fkey">BookID</th>
+                  </tr>
+            </table>
+            <script src="script.js"></script>
+      </body>
+</html>
